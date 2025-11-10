@@ -33,7 +33,7 @@ Assets/Scenes/LocomotionTemplate.unity
 
 1. Select and copy these GameObjects from the **LocomotionTemplate** scene:
 - ✅ `OVRCameraRig` — Handles head tracking, controller input, and hand tracking.
-- ✅ `LGestureTutorials` — Contains hand gesture locomotion logic.
+- ✅ `LGestureTutorials` — Contains hand gesture locomotion tutorial logic.
 - ✅ `Teleport NavMesh` — Handles teleportation logic and NavMesh setup.
 2. Open your **target scene**.
 3. Paste the copied GameObjects into the Hierarchy.
@@ -57,7 +57,6 @@ Right-click → Create Empty → Rename to "NavMeshSurface"
 Component → AI → NavMesh Surface
 4. Configure the **NavMeshSurface** component:
 - **Agent Type:** `Humanoid`
-- **Include Layers:** Select the layers containing your walkable ground/floor.
 - **Default Area:** `Walkable`
 - *(Optional)* Adjust **Bake Settings** if your environment is large or complex.
 5. Click **Bake** to generate the NavMesh.
@@ -77,15 +76,6 @@ Component → AI → NavMesh Surface
 #### 🧩 If Teleportation Doesn’t Work:
 - Ensure the **NavMeshSurface** is baked successfully (blue walkable areas visible in Scene view).
 - Confirm the `Teleport NavMesh` GameObject is **active**.
-- Verify your ground meshes are on the **included layers**.
-
----
-
-### 5. Optional Adjustments
-
-- Modify teleport settings and reticle visuals under `Teleport NavMesh`.
-- Tune gesture behavior in `LGestureTutorials`.
-- Adjust head and hand tracking in `OVRCameraRig`.
 
 ---
 
@@ -97,7 +87,6 @@ Component → AI → NavMesh Surface
 | Add NavMeshSurface | Create as a **child** of `Teleport NavMesh` |
 | Agent Type | **Humanoid** |
 | Default Area | **Walkable** |
-| Bake NavMesh | Include all walkable layers |
 | Test Teleportation | Use controller or hand gestures to verify teleport works |
 
 ---
