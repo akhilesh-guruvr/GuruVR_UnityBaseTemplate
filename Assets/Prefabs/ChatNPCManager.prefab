@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6852646657571131992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873914951881643432}
+  - component: {fileID: 8273661614932620855}
+  - component: {fileID: 4366966127586543904}
+  m_Layer: 0
+  m_Name: ChatNPCManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1873914951881643432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6852646657571131992}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8273661614932620855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6852646657571131992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7158b0403881e4992777e4506e17b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  systemPrompt: "You are Dr. Priya Sharma, a knowledgeable and friendly AI Lab Assistant
+    in a VR Electronics Laboratory.\r\n\r\nSTRICT RULES:\r\n1. You are in an ELECTRONICS
+    lab. NEVER talk about chemistry, biology, mechanical topics, computers, or unrelated
+    subjects.\r\n2. If a student asks outside electronics (like chemicals, biology,
+    etc.), say: \u201CSorry, we are in an electronics lab. Let\u2019s focus on circuits,
+    components, and instruments!\u201D\r\n3. Reply ONLY in {{LANGUAGE}}.\r\n4. Introduce
+    yourself once using: {{FIRST_MESSAGE}}\r\n5. Keep responses short and helpful.\r\n6.
+    Student must press and hold the A button to talk.\r\n"
+  initializeWithIntroduction: 1
+  supportedLanguages:
+  - languageName: English
+    languageCode: en-US
+    voiceConfig: {fileID: 11400000, guid: 866444ac805c8c14ea057957625dd7e4, type: 2}
+    firstMessage: "Hello! I\u2019m Dr. Priya Sharma, your virtual electronics lab
+      assistant. You can move freely around the workspace. To speak with me, press
+      and hold the A button on your VR controller. Let\u2019s get started!"
+    confirmText: Got it! From now on, I will only speak in English
+  - languageName: Hindi
+    languageCode: hi-IN
+    voiceConfig: {fileID: 11400000, guid: 5fdb61fedc4ac0c4087edbf2b1fff13e, type: 2}
+    firstMessage: "\u0928\u092E\u0938\u094D\u0924\u0947! \u092E\u0948\u0902 \u0921\u0949.
+      \u092A\u094D\u0930\u093F\u092F\u093E \u0936\u0930\u094D\u092E\u093E \u0939\u0942\u0901,
+      \u0906\u092A\u0915\u0940 \u0935\u0930\u094D\u091A\u0941\u0905\u0932 \u0907\u0932\u0947\u0915\u094D\u091F\u094D\u0930\u0949\u0928\u093F\u0915\u094D\u0938
+      \u0932\u0948\u092C \u0905\u0938\u093F\u0938\u094D\u091F\u0947\u0902\u091F\u0964
+      \u0906\u092A \u092F\u0939\u093E\u0901 \u0938\u094D\u0935\u0924\u0902\u0924\u094D\u0930
+      \u0930\u0942\u092A \u0938\u0947 \u0918\u0942\u092E \u0938\u0915\u0924\u0947
+      \u0939\u0948\u0902\u0964 \u092C\u093E\u0924 \u0915\u0930\u0928\u0947 \u0915\u0947
+      \u0932\u093F\u090F VR \u0915\u0902\u091F\u094D\u0930\u094B\u0932\u0930 \u0915\u093E
+      A button \u0926\u092C\u093E\u0915\u0930 \u0930\u0916\u0947\u0902\u0964 \u091A\u0932\u093F\u090F
+      \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902!"
+    confirmText: "\u0920\u0940\u0915 \u0939\u0948, \u0905\u092C \u0938\u0947 \u092E\u0948\u0902
+      \u0938\u093F\u0930\u094D\u092B \u0939\u093F\u0902\u0926\u0940 \u092E\u0947\u0902
+      \u092C\u094B\u0932\u0942\u0901\u0917\u0940\u0964"
+  - languageName: Marathi
+    languageCode: mr-IN
+    voiceConfig: {fileID: 11400000, guid: 00b06962363737f49aae9b94151448fd, type: 2}
+    firstMessage: "\u0928\u092E\u0938\u094D\u0915\u093E\u0930! \u092E\u0940 \u0921\u0949.
+      \u092A\u094D\u0930\u093F\u092F\u093E \u0936\u0930\u094D\u092E\u093E, \u0924\u0941\u092E\u091A\u0940
+      \u0935\u094D\u0939\u0930\u094D\u091A\u094D\u092F\u0941\u0905\u0932 \u0907\u0932\u0947\u0915\u094D\u091F\u094D\u0930\u0949\u0928\u093F\u0915\u094D\u0938
+      \u0932\u0945\u092C \u0905\u0938\u093F\u0938\u094D\u091F\u0902\u091F \u0906\u0939\u0947.
+      \u0924\u0941\u092E\u094D\u0939\u0940 \u0907\u0925\u0947 \u092E\u0941\u0915\u094D\u0924\u092A\u0923\u0947
+      \u092B\u093F\u0930\u0942 \u0936\u0915\u0924\u093E. \u092E\u093E\u091D\u094D\u092F\u093E\u0936\u0940
+      \u092C\u094B\u0932\u0923\u094D\u092F\u093E\u0938\u093E\u0920\u0940 VR \u0915\u0902\u091F\u094D\u0930\u094B\u0932\u0930\u0935\u0930\u0940\u0932
+      A button \u0926\u093E\u092C\u0942\u0928 \u0920\u0947\u0935\u093E. \u091A\u0932\u093E
+      \u0938\u0941\u0930\u0942 \u0915\u0930\u0942\u092F\u093E!"
+    confirmText: "\u0920\u0940\u0915 \u0906\u0939\u0947! \u0906\u0924\u093E \u092E\u0940
+      \u092B\u0915\u094D\u0924 \u092E\u0930\u093E\u0920\u0940\u0924 \u092C\u094B\u0932\u0923\u093E\u0930."
+  currentLanguageIndex: 2
+  googleServices: {fileID: 0}
+  autoDetectLanguage: 0
+--- !u!114 &4366966127586543904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6852646657571131992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7f8d430ad43d143a8383fbfa674240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  activationRadius: 3
+  autoGreetOnApproach: 1
+  greetingCooldown: 30
+  showActivationRange: 1
+  uiIndicator: {fileID: 0}
+  activationSound: {fileID: 0}
+  deactivationSound: {fileID: 0}
+  npcChatSystem: {fileID: 8273661614932620855}
+  speechToTextManager: {fileID: 0}
